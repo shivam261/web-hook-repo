@@ -4,5 +4,6 @@ import os
 app = create_app()
 
 if __name__ == '__main__':
-    h=os.getenv("HOST","127.0.0.1" )
-    app.run(host=h,debug=False)
+    h = os.getenv("HOST", "0.0.0.0")
+    p = int(os.getenv("PORT", 5000))
+    app.run(host=h, port=p, debug=False)
